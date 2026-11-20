@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "ETUSA Pay",
+    "slug": "etusa-pay",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "etusapay",
+    "ios": {
+      "bundleIdentifier": "pe.etusa.pay",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NFCReaderUsageDescription": "ETUSA Pay utiliza NFC para leer el validador del bus y registrar el pago del pasaje.",
+        "com.apple.developer.nfc.readersession.formats": [
+          "NDEF"
+        ]
+      }
+    },
+    "android": {
+      "package": "pe.etusa.pay",
+      "permissions": [
+        "NFC",
+        "VIBRATE"
+      ],
+      "usesCleartextTraffic": false
+    },
+    "plugins": [
+      "react-native-nfc-manager",
+      "expo-status-bar"
+    ],
+    "experiments": {
+      "typedRoutes": false
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
